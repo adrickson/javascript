@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    
+        <h1 class="tit__principal">Nacionalidade</h1>
+    
+    <form action="" method="get">
+        <div class="cont__lab__inp">
+            <label for="ipais">País: </label>
+            <input type="text" name="pais" id="ipais" value="Brasil">
+        </div>
+
+        <div class="botao"><input type="button" value="Nacionalidade" onclick="gringo()"></div>
+        <output class="cont__res">
+            <p id="res">Você é Brasileiro</p>
+        </output>
+    </form>
+
+    <script>
+        function gringo(){
+            var país = window.document.querySelector('input#ipais')
+            var res = window.document.getElementById('res')
+
+            var nacio = (país.value)
+
+            if (nacio == 'Brasil') {
+                res.innerHTML = `Você é Brasileiro`
+            } else {
+                res.innerHTML = `Você é Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
